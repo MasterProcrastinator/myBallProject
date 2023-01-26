@@ -14,7 +14,10 @@ public class Ball
     }
 
 
+    public void drawBall(Graphics g){
+        g.fillOval(x,y,size,size);
 
+    }
 
     public int getSize(){
         return size;

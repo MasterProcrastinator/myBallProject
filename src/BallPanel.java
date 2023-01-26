@@ -7,6 +7,9 @@ import java.sql.SQLOutput;
 public class BallPanel extends JPanel
 {
 
+    //20 random balls, make loop system that adds a new ball variable to an array
+
+
     Ball marble = new Ball(40,40,10);
     Ball ok = new Ball(100,100,60);
 
@@ -40,20 +43,15 @@ public class BallPanel extends JPanel
                         ok.setX(change);
                     }
                 }
-                if (blah == 38){
+                if (blah == 38 && ok.getY()>=0){
                     ok.moveUp();
-                    if(ok.getY()<=0){
-                        int change = ok.getY() + getHeight()- ok.getSize();
-                        ok.setY(change);
-                    }
+
                 }
-                if (blah == 40){
+                if (blah == 40 && ok.getY()<=(getHeight()-ok.getSize())){
                     ok.moveDown();
-                    if(ok.getY()>=(getHeight()-ok.getSize())) {
-                        int change = ok.getY() - getHeight()+ ok.getSize();
-                        ok.setY(change);
+
                     }
-                }
+
 
             }
 
@@ -73,8 +71,8 @@ public class BallPanel extends JPanel
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        g.fillOval(marble.getX(),marble.getY(),marble.getSize(),marble.getSize());
-        g.fillOval(ok.getX(),ok.getY(),ok.getSize(),ok.getSize());
+        marble.drawBall(g);
+        ok.drawBall(g);
 
 
 
