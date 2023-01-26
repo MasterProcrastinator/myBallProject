@@ -72,12 +72,13 @@ public class BallPanel extends JPanel
         super.paintComponent(g);
 
         marble.drawBall(g);
-        ok.drawBall(g);
 
+        ok.drawBall(g);
+        marble.move();
 
 
         try{
-            Thread.sleep(2);
+            Thread.sleep(20);
         }
         catch(Exception e){
             System.out.println(e);

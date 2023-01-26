@@ -1,3 +1,4 @@
+import java.util.*;
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
@@ -9,8 +10,8 @@ public class Ball
         this.x = x;
         this.y = y;
         this.size = size;
-        xSpeed = 100;
-        ySpeed = 100;
+        xSpeed = 6;
+        ySpeed = 6;
     }
 
 
@@ -53,6 +54,9 @@ public class Ball
     public void setY(int y2){
         y = y2;
     }
-
+    public void move(){
+        x += xSpeed;
+        y += ySpeed;
+    }
 
 }
