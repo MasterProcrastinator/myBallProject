@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.*;
 import java.sql.SQLOutput;
 
 public class BallPanel extends JPanel
@@ -70,6 +71,17 @@ public class BallPanel extends JPanel
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
+
+        ArrayList<Ball> balls = new ArrayList<Ball>();
+
+        for(int i = 0;i<=20 ;i++){
+
+            balls.add(new Ball((int)(Math.random()*50+10),(int)(Math.random()*50+10),100,100);
+
+
+
+        }
+
 
         marble.drawBall(g);
 
