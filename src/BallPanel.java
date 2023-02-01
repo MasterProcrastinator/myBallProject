@@ -74,15 +74,15 @@ public class BallPanel extends JPanel
 
         ArrayList<Ball> balls = new ArrayList<Ball>();
 
-        for(int i = 0;i<=20 ;i++){
-
-            balls.add(new Ball((int)(Math.random()*50+10),(int)(Math.random()*50+10),100,100);
-
-
-
+        for(int i = 0;i<=20 ;i++) {
+            int randomX = (int) ((Math.random() * 300) + 20);
+            int randomY = (int) ((Math.random() * 300) + 20);
+            Ball random = new Ball(randomX, randomY, 20);
+            balls.add(random);
         }
-
-
+        for(Ball array : balls) {
+            array.drawBall(g);
+        }
         marble.drawBall(g);
 
         ok.drawBall(g);
