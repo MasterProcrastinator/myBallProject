@@ -1,7 +1,7 @@
 import java.util.*;
 import javax.swing.*;
 import java.awt.*;
-import java.util.*;
+import java.awt.Color;
 public class Ball
 {
     private int x,y,size,xSpeed,ySpeed;
@@ -17,6 +17,8 @@ public class Ball
 
     public void drawBall(Graphics g){
         g.fillOval(x,y,size,size);
+
+
 
     }
 
@@ -35,28 +37,18 @@ public class Ball
     public int getYSpeed(){
         return ySpeed;
     }
-    public void moveRight(){
-        x+= 5;
-    }
-    public void moveLeft(){
-        x = x-5;
-    }
-    public void moveDown(){
-        y+=5;
-    }
-    public void moveUp(){
-        y+=-5;
-    }
-    public void setX(int x2)
-    {
-        x = x2;
-    }
-    public void setY(int y2){
-        y = y2;
-    }
-    public void move(){
+
+
+    public void move(JPanel anyName){
         x += xSpeed;
         y += ySpeed;
+        if(x>=(anyName.getWidth()-size) || x<=0){
+            xSpeed*=-1;
+        }
+        if(y>=(anyName.getHeight()-size) || y<=0){
+            ySpeed*=-1;
+        }
+
+        }
     }
 
-}

@@ -4,89 +4,40 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.*;
 import java.sql.SQLOutput;
-
+import java.awt.Color.*;
 public class BallPanel extends JPanel
 {
 
     //20 random balls, make loop system that adds a new ball variable to an array
 
 
-    Ball marble = new Ball(40,40,10);
-    Ball ok = new Ball(100,100,60);
 
+
+    ArrayList<Ball> balls = new ArrayList<Ball>();
 
     public BallPanel()
     {
-
-
-        this.setFocusable(true);
-        this.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                System.out.println(e.getKeyCode());
-                int blah = e.getKeyCode();
-                if (blah == 37){
-                    ok.moveLeft();
-                    if(ok.getX()<=0){
-                        int change = ok.getX()+ getWidth() - ok.getSize();
-                        ok.setX(change);
-                    }
-                }
-                if (blah == 39){
-                    ok.moveRight();
-                    if(ok.getX()>=(getWidth()-ok.getSize())){
-                        int change = ok.getX()- getWidth()+ok.getSize();
-                        ok.setX(change);
-                    }
-                }
-                if (blah == 38 && ok.getY()>=0){
-                    ok.moveUp();
-
-                }
-                if (blah == 40 && ok.getY()<=(getHeight()-ok.getSize())){
-                    ok.moveDown();
-
-                    }
-
-
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-        });
-
-
-
-
         setBackground(Color.RED);
+        for(int i = 0;i<=20 ;i++) {
+
+            int randomX = (int) ((Math.random() * 300) + 20);
+            int randomY = (int) ((Math.random() * 300) + 20);
+            balls.add(new Ball(randomX, randomY, 20));
+            }
+
     }
+
+
+
 
     @Override
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
 
-        ArrayList<Ball> balls = new ArrayList<Ball>();
-
-        for(int i = 0;i<=20 ;i++) {
-            int randomX = (int) ((Math.random() * 300) + 20);
-            int randomY = (int) ((Math.random() * 300) + 20);
-            Ball random = new Ball(randomX, randomY, 20);
-            balls.add(random);
-        }
         for(Ball array : balls) {
             array.drawBall(g);
+            array.move(this);
         }
-        marble.drawBall(g);
-
-        ok.drawBall(g);
-        marble.move();
 
 
         try{
