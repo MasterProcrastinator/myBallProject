@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="314c52da-1042-434b-9f01-a61866691110" name="Changes" comment="attempted 20 random balls, only made a seizure">
+    <list default="true" id="314c52da-1042-434b-9f01-a61866691110" name="Changes" comment="finally made 20 balls, just need color now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BallPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BallPanel.java" afterDir="false" />
@@ -85,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675266423588</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="finally made 20 balls, just need color now">
+      <created>1676475953988</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676475953988</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +111,7 @@
     <MESSAGE value="added drawBall method" />
     <MESSAGE value="made ball move with method" />
     <MESSAGE value="attempted 20 random balls, only made a seizure" />
-    <option name="LAST_COMMIT_MESSAGE" value="attempted 20 random balls, only made a seizure" />
+    <MESSAGE value="finally made 20 balls, just need color now" />
+    <option name="LAST_COMMIT_MESSAGE" value="finally made 20 balls, just need color now" />
   </component>
 </project>

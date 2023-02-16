@@ -5,6 +5,7 @@ import java.awt.Color;
 public class Ball
 {
     private int x,y,size,xSpeed,ySpeed;
+    private Color color;
 
     public Ball(int x, int y, int size){
         this.x = x;
@@ -12,11 +13,16 @@ public class Ball
         this.size = size;
         xSpeed = 6;
         ySpeed = 6;
+        int r = (int)((Math.random()) * 256 + 0);
+        int g = (int)((Math.random()) * 256 + 0);;
+        int b = (int)((Math.random()) * 256 + 0);;
+        color = new Color(r,g,b);
     }
 
 
     public void drawBall(Graphics g){
         g.fillOval(x,y,size,size);
+
 
 
 

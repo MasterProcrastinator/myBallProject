@@ -22,7 +22,8 @@ public class BallPanel extends JPanel
 
             int randomX = (int) ((Math.random() * 300) + 20);
             int randomY = (int) ((Math.random() * 300) + 20);
-            balls.add(new Ball(randomX, randomY, 20));
+            int randomSize = (int) ((Math.random() * 60) + 10);
+            balls.add(new Ball(randomX, randomY, randomSize));
             }
 
     }
@@ -36,6 +37,7 @@ public class BallPanel extends JPanel
 
         for(Ball array : balls) {
             array.drawBall(g);
+
             array.move(this);
         }
 
