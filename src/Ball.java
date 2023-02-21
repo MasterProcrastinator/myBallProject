@@ -22,10 +22,14 @@ public class Ball
 
     public void drawBall(Graphics g){
         g.fillOval(x,y,size,size);
+        g.setColor(color);
 
 
 
 
+    }
+    public Color getColor(){
+        return color;
     }
 
     public int getSize(){
